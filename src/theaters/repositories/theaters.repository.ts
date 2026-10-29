@@ -5,6 +5,7 @@ import { Theater } from '../entities/theater.entity';
 
 @Injectable()
 export class TheatersRepository {
+  
   constructor(@InjectDataSource() private readonly dataSource: DataSource) {}
 
   async findLargeTheatersReport(minCapacity: number): Promise<Theater[]> {
